@@ -1,0 +1,3 @@
+ERROR:
+room_detail template, scroll animation of room description and room_messages are not configured properly
+activities template is not configured properly in mobile responsive view
