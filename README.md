@@ -1,19 +1,35 @@
 # Chat Room
 
-This project is based on [Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI) by Traversy Media.
+- CRUD operations on Room, Message models using FBV views
+- Users can search rooms by topic name, room name, and room description
+- Users can filter rooms based on Topic
+- User authentication via email and authorization
+- Users can upload profile pictures, view and edit their user profile
+- Users can post comments on rooms
+- Activities and Participants feeds to view recent activities and participants users of a room
 
-In this project user can login via email and can search room by topic name, room name, and room description.
+# To run this project
 
-To run this project:
+> Note: for Windows, use `py` instead of `python`.
 
-Create Superuser
+## Migrations
 
 ```
-$ py manage.py createsuperuser
+$ python manage.py migrate
 ```
 
-Run Server
+```
+$ python manage.py makemigrations
+```
+
+## Create Superuser
 
 ```
-$ py manage.py runserver
+$ python manage.py createsuperuser
+```
+
+## Run Server
+
+```
+$ python manage.py runserver
 ```
