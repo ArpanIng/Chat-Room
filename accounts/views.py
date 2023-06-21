@@ -58,7 +58,6 @@ def register_view(request):
         "form": form,
         "authentication_page": authentication_page,
     }
-
     return render(request, "accounts/login_register.html", context)
 
 
@@ -75,7 +74,6 @@ def profile_view(request, pk):
         "room_messages": room_messages,
         "topics": topics,
     }
-
     return render(request, "accounts/profile.html", context)
 
 
@@ -84,7 +82,9 @@ def profile_edit_view(request):
 
     if request.method == "POST":
         form = UserProfileEditModelForm(
-            request.POST, request.FILES, instance=request.user
+            request.POST,
+            request.FILES,
+            instance=request.user,
         )
         if form.is_valid():
             form.save()
@@ -95,5 +95,4 @@ def profile_edit_view(request):
     context = {
         "form": form,
     }
-
     return render(request, "accounts/profile_edit.html", context)
